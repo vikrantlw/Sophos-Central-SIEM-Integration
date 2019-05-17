@@ -133,7 +133,7 @@ def main():
         app_path = os.environ['SOPHOS_SIEM_HOME']
     else:
         # Setup path
-        app_path = os.path.join(os.getcwd())
+        app_path = os.path.join(os.path.abspath(os.path.dirname(__file__)))
 
     config_file = os.path.join(app_path, 'config.ini')
 
